@@ -1,11 +1,61 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro"
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+<!-- Full-width Fade Slideshow with smaller caption -->
+<div class="hero-slideshow" id="heroSlider">
+  <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?w=1600&auto=format');"></div>
+  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1600&auto=format');"></div>
+  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1600&auto=format');"></div>
+  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1526510747491-58f928ec870f?w=1600&auto=format');"></div>
+  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&auto=format');"></div>
+  <div class="hero-content">
+    <h1>Cinematic Stories</h1>
+    <p>Director & cinematographer crafting moving images.</p>
+    <a href="#videos" class="hero-btn">Watch Reel →</a>
+  </div>
+  <div class="slider-controls">
+    <button id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+    <button id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+  </div>
+  <div class="slider-dots" id="sliderDots"></div>
+</div>
+
+<main>
+  <!-- Photographer Showcase -->
+  <section id="showcase" class="showcase">
+    <h2>The Visionary</h2>
+    <div class="showcase-sub">With a background in fine art and documentary film, I create visual narratives that linger.</div>
+    <div class="photographer-card">
+      <div class="photographer-img">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&auto=format" alt="Photographer portrait">
+      </div>
+      <div class="photographer-bio">
+        <h3>Alex Mercer</h3>
+        <p>Alex Mercer is an award‑winning cinematographer and director whose work spans fashion films, wedding documentaries, and branded content. His approach blends poetic composition with authentic emotion, capturing the essence of every story.</p>
+        <p>Based in Los Angeles, Alex collaborates with clients worldwide to create timeless visual pieces.</p>
+        <div class="signature">— Alex Mercer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Collection with Load More -->
+  <section id="videos" class="video-collection">
+    <h2>Video Collection</h2>
+    <div class="video-grid" id="videoGrid"></div>
+    <button id="loadMoreBtn" class="load-more-btn">Load More Videos</button>
+  </section>
+
+  <!-- Contact -->
+  <div id="contact" class="contact-section">
+    <h2>Let's Create Together</h2>
+    <form class="contact-form" id="contactForm">
+      <input type="text" placeholder="Your name" id="contactName" required>
+      <input type="email" placeholder="Email address" id="contactEmail" required>
+      <textarea rows="4" placeholder="Tell me about your project or vision..."></textarea>
+      <button type="submit">Send Message →</button>
+    </form>
+  </div>
+</main>
+</BaseLayout>

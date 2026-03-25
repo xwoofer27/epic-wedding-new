@@ -1,0 +1,41 @@
+---
+import '../assets/styles/global.css';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Epic Wedding | Wedding Videography and Photography</title>
+  <!-- Google Fonts: Inter + Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="logo">Epic Wedding</div>
+    <div class="menu-icon" id="menuToggle"><i class="fas fa-bars"></i></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#showcase">Photographer</a></li>
+      <li><a href="#videos">Video Collection</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<slot/>
+<footer>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-vimeo-v"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+  </div>
+  <p>© 2025 Epic Wedding — Cinematic Storytelling</p>
+</footer>
+</body>
+<script src="../assets/scripts/main.js">
+
+</script>
+</html>
